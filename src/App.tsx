@@ -1,7 +1,6 @@
 
 
-
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 
 interface Anime {
   link: string;
@@ -26,7 +25,7 @@ export default function  App() {
   });
 
   useEffect(() => {
-    fetch('../Anime.json')
+    fetch("../Anime.json")
       .then((response) => response.json())
       .then((data) => setAnimeList(data));
   }, []);
@@ -42,9 +41,11 @@ export default function  App() {
                 <a href={anime.link} target="_blank" rel="noopener noreferrer">
                   {anime.name}
                 </a>
+              
               </span>
             </div>
           ))}
+          <h2>hi</h2>
         </div>
         <div>
           <h1 className='text-2xl font-bold'>Plan To Watch</h1>
