@@ -1,9 +1,5 @@
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e80159b638c5c43ca66d5ddce75cf85213e53537
 import  { useEffect, useState } from 'react';
 
 interface Anime {
