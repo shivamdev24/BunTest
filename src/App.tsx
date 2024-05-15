@@ -1,41 +1,42 @@
 
 
-import  { useEffect, useState } from 'react';
+// import  { useEffect, useState } from 'react';
 
-interface Anime {
-  link: string;
-  name: string;
-}
+// interface Anime {
+//   link: string;
+//   name: string;
+// }
 
-interface AnimeList {
-  Completed: Anime[];
-  PlanToWatch: Anime[];
-  OnHold: Anime[];
-  Dropped: Anime[];
-  Watching: Anime[];
-}
+// interface AnimeList {
+//   Completed: Anime[];
+//   PlanToWatch: Anime[];
+//   OnHold: Anime[];
+//   Dropped: Anime[];
+//   Watching: Anime[];
+// }
 
 
 export default function  App() {
-  const [animeList, setAnimeList] = useState<AnimeList>({
-    Completed: [],
-    PlanToWatch: [],
-    OnHold: [],
-    Dropped: [],
-    Watching: [],
-  });
+  // const [animeList, setAnimeList] = useState<AnimeList>({
+  //   Completed: [],
+  //   PlanToWatch: [],
+  //   OnHold: [],
+  //   Dropped: [],
+  //   Watching: [],
+  // });
 
-  useEffect(() => {
-    fetch("../Anime.json")
-      .then((response) => response.json())
-      .then((data) => setAnimeList(data));
+  // useEffect(() => {
+  //   fetch("../Anime.json")
+  //     .then((response) => response.json())
+  //     .then((data) => setAnimeList(data));
 
-      console.log("sucess")
-  }, []);
+  //     console.log("sucess")
+  // }, []);
 
   return (
     <div className="App">
-      <div className="flex ">
+      <h1>Try this!</h1>
+      {/* <div className="flex ">
         <div>
           <h1 className='text-2xl font-bold'>Completed</h1>
           {animeList.Completed.map((anime) => (
@@ -97,7 +98,7 @@ export default function  App() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 
