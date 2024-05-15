@@ -15,6 +15,7 @@ interface AnimeList {
   Watching: Anime[];
 }
 
+
 export default function  App() {
   const [animeList, setAnimeList] = useState<AnimeList>({
     Completed: [],
@@ -28,6 +29,8 @@ export default function  App() {
     fetch("../Anime.json")
       .then((response) => response.json())
       .then((data) => setAnimeList(data));
+
+      console.log("sucess")
   }, []);
 
   return (
@@ -45,7 +48,6 @@ export default function  App() {
               </span>
             </div>
           ))}
-          <h2>hi</h2>
         </div>
         <div>
           <h1 className='text-2xl font-bold'>Plan To Watch</h1>
